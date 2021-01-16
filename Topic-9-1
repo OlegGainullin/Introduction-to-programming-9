@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int a = 0;
+    int answer = 0;
+    printf("Введите N: ");
+    scanf("%d", &a);
+    answer = a%60;
+    printf("Кол-во секунд от начала последней минуты: %d", answer);
+    return 0;
+}
