@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int k = 0;
+    int n = 0;
+    int answer = 0;
+    printf("Введите K: ");
+    scanf("%d", &k);
+    printf("Введите N: ");
+    scanf("%d", &n);
+    answer = ((k%7)+n)%7-1;
+    if (answer == -1)
+            answer = 6;
+    if (answer == 0)
+            answer = 7;
+    printf("Номер дня: %d", answer);
+    return 0;
+}
