@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    int answer1 = 0;
+    int answer2 = 0;
+    printf("Введите A: ");
+    scanf("%d", &a);
+    printf("Введите B: ");
+    scanf("%d", &b);
+    printf("Введите C: ");
+    scanf("%d", &c);
+    answer1 = (a/c)*(b/c);
+    answer2 = (a*b)-((a/c*c)*(b/c*c));
+    printf("Кол-во квадратов: %d \n", answer1);
+    printf("Незанятая площадь: %d", answer2);
+    return 0;
+}
